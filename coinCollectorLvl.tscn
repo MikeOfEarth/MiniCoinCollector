@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://t4emqx3hoh8u"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_uxqn4"]
+[ext_resource type="Texture2D" uid="uid://bx7xckpi23xwg" path="res://Sprites/Player.png" id="2_xedvn"]
+[ext_resource type="PackedScene" uid="uid://c571yvcr5qtkr" path="res://coin.tscn" id="3_ot30w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ythrj"]
+size = Vector2(53, 66)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_uxqn4")
+
+[node name="Sprite" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_xedvn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-0.5, 15)
+shape = SubResource("RectangleShape2D_ythrj")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Coin" parent="." instance=ExtResource("3_ot30w")]
+position = Vector2(118, 140)
+scale = Vector2(1.06733, 1.02383)
+
+[node name="Coin2" parent="." instance=ExtResource("3_ot30w")]
+position = Vector2(285, -88)
+
+[node name="Coin3" parent="." instance=ExtResource("3_ot30w")]
+position = Vector2(-191, -94)
+
+[node name="Coin4" parent="." instance=ExtResource("3_ot30w")]
+position = Vector2(-206, 158)
+
+[node name="Coin5" parent="." instance=ExtResource("3_ot30w")]
+position = Vector2(372, 212)
+scale = Vector2(1.06733, 1.02383)
+
+[node name="Coin6" parent="." instance=ExtResource("3_ot30w")]
+position = Vector2(275, 66)
+
+[node name="Coin7" parent="." instance=ExtResource("3_ot30w")]
+position = Vector2(498, 52)
+
+[node name="Coin8" parent="." instance=ExtResource("3_ot30w")]
+position = Vector2(-318, -28)
+
+[node name="Coin9" parent="." instance=ExtResource("3_ot30w")]
+position = Vector2(805, 447)
+scale = Vector2(1.06733, 1.02383)
+
+[node name="Coin10" parent="." instance=ExtResource("3_ot30w")]
+position = Vector2(972, 219)
+
+[node name="Coin11" parent="." instance=ExtResource("3_ot30w")]
+position = Vector2(496, 213)
+
+[node name="Coin12" parent="." instance=ExtResource("3_ot30w")]
+position = Vector2(481, 465)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 386.0
+offset_top = 496.0
+offset_right = 516.0
+offset_bottom = 536.0
+scale = Vector2(4.03933, 3.82633)
+text = "WELL DONE FOO"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
