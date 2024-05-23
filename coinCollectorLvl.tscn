@@ -70,3 +70,6 @@ text = "WELL DONE FOO"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
+
+[node name="Coin13" parent="." instance=ExtResource("3_ot30w")]
+position = Vector2(78, 250)
